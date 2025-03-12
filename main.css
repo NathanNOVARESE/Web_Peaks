@@ -1,0 +1,407 @@
+.hero-section {
+    position: relative;
+    background-image: url('images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    
+    padding: 40px;
+    border-radius: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.highlight {
+    color: #FAFA1E; 
+    font-size: 1.2em;
+}
+
+
+.hero-search-bar {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    width: 300px;
+    max-width: 80%;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+}
+
+.hero-search-bar::placeholder {
+    color: #888;
+}
+
+
+.snake-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #FAFA1E;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+}
+
+
+
+.recently-viewed {
+    width: 90%;
+    background-color: #f8f8f8; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto; 
+}
+
+
+.recently-title {
+    font-family: 'Sztos', sans-serif; 
+    font-style: italic;
+    font-weight: 500; 
+    text-align: Left;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.highlight-underline {
+    position: relative;
+    font-weight: 500;
+    box-shadow: inset 0 -5px 0 #FAFA1E;
+}
+
+.highlight-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    
+    transform: translateY(4px); 
+}
+
+
+.cards-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    
+}
+
+
+.card {
+    width: 450px;
+    height: 450px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+
+.card-title {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); }
+
+
+/* Style de la section contenant la carte et l'info */
+.map-info-section {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto;
+    height: 800px;
+}
+
+/* Conteneur de la carte */
+.map-container {
+    width: 70%;
+    height: 100%;
+    margin-right: 100px;
+}
+
+/* Style de la carte */
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Ajout de bords arrondis pour un design moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour donner de la profondeur */
+}
+
+/* Conteneur de l'info */
+.info-container {
+    width: 30%;
+    height: 95%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Légèrement plus clair pour le fond */
+    border-radius: 15px; /* Plus de courbes */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+    overflow-y: auto; /* Permet de défiler si le contenu dépasse */
+}
+
+/* Titres des sections dans l'info-container */
+h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600; /* Augmentation de l'épaisseur de la police pour les titres */
+}
+
+/* Accessibilité */
+.accessibility .circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Un peu plus d'espace entre les sections */
+}
+
+/* Style des cercles de niveaux */
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: background-color 0.3s ease; /* Ajout d'une transition pour l'effet au survol */
+}
+
+.level-1 {
+    background-color: #bbb;
+}
+
+.level-2 {
+    background-color: #999;
+}
+
+.level-3 {
+    background-color: #666;
+}
+
+/* Modifie la couleur au survol */
+.circle:hover {
+    background-color: #FAFA1E;
+}
+
+/* Fréquentation */
+.frequentation .rectangle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Style des rectangles pour la fréquentation */
+.rectangle {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #bbb;
+    transition: background-color 0.3s ease;
+}
+
+.level-1 {
+    background-color: #bbb;
+}
+
+.level-2 {
+    background-color: #999;
+}
+
+.level-3 {
+    background-color: #666;
+}
+
+/* Change la couleur au survol */
+.rectangle:hover {
+    background-color: #FAFA1E;
+}
+
+/* Distance */
+.distance {
+    margin-top: 20px;
+}
+
+/* Style de la barre de progression */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Remplissage de la barre de progression */
+.progress-fill {
+    height: 100%;
+    background-color: #FAFA1E; /* Couleur jaune pour le remplissage */
+    border-radius: 10px;
+}
+
+/* Difficulté */
+.difficulty .rectangle-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style des rectangles de niveau de difficulté */
+.rectangle {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #bbb;
+    transition: background-color 0.3s ease;
+}
+
+/* Ajout d'une transition au survol des rectangles */
+.rectangle:hover {
+    background-color: #FAFA1E;
+}
+
+/* Enlever les éléments de contrôle de Leaflet */
+.leaflet-top.leaflet-right {
+    opacity: 0;
+    pointer-events: none; /* Empêche les clics sur l'élément */
+}
+
+/* Sélecteur de station */
+.station-selector {
+    margin-top: 60px;
+}
+
+.station-selector label {
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: #333;
+    font-weight: 600; /* Titre en gras */
+}
+
+.station-selector select {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 20px; /* Augmenter l'espace intérieur pour un meilleur confort visuel */
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bords légèrement plus arrondis pour un look moderne */
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour une animation douce */
+}
+
+.station-selector select:focus {
+    border-color: #FAFA1E; /* Changer la couleur du bord lors du focus pour attirer l'attention */
+    box-shadow: 0 0 5px rgba(255, 247, 0, 0.5); /* Ajout d'une ombre lors du focus pour mettre en avant le champ */
+}
+
+.station-selector select:hover {
+    border-color: #999; /* Légère modification de la couleur du bord au survol */
+}
+
+#submit {
+    margin-top: 20px;
+    background-color: #666; /* Couleur de fond souhaitée */
+    color: #fff; /* Texte blanc pour contraster */
+    padding: 8px 10px; /* Espacement plus petit pour un bouton compact */
+    font-size: 14px; /* Taille de texte réduite pour un bouton discret */
+    border: none; /* Aucune bordure */
+    border-radius: 4px; /* Bords arrondis, mais discrets */
+    cursor: pointer; /* Indicateur visuel que le bouton est cliquable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation douce au survol */
+    min-width: 120px; /* Largeur minimale pour ne pas être trop petit */
+    text-align: center; /* Centrer le texte à l'intérieur */
+}
+
+#submit:hover {
+    background-color: #D1D100; /* Couleur de survol légèrement plus foncée */
+    transform: scale(1.05); /* Effet d'agrandissement léger */
+}
+
+#submit:focus {
+    outline: none; /* Supprimer l'outline par défaut */
+    box-shadow: 0 0 5px rgba(250, 250, 30, 0.7); /* Ombre légère pour l'effet de focus */
+}
+
+
+/* Effet au survol de la carte */
+#map:hover {
+    cursor: pointer; /* Changer le curseur lorsque l'on survole la carte */
+}
+
+
+.app-section {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.app-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+.app-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.app-image {
+    width: 400px;
+    height: 800px;
+    object-fit: cover; /* Assure que l'image couvre tout l'espace sans déformer */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-search-bar {
+        width: 250px;
+    }
+}

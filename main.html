@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peaks Main</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+   
+    
+
+</head>
+<body>
+
+
+    <nav>
+        <input type="text" class="search-bar" placeholder="Villes, Pistes...">
+        <a href="#" class="nav-link">Challenges</a>
+        <a href="#" class="nav-link">Communautés</a>
+        <a href="#" class="nav-link-yellow"> <img src="images/user_icones.png" class="user_icones"> </a>
+        
+    </nav>
+
+ 
+    
+
+
+    <header class="hero-section">
+        <div class="snake-shape"></div>
+        <div class="hero-content">
+            <h1>Bienvenue sur <span class="highlight">PEAKS</span> Lubin</h1>
+            <input type="text" class="hero-search-bar" placeholder="Villes, Pistes...">
+        </div>
+    </header>
+
+
+
+
+
+
+    <section class="recently-viewed">
+        <h2 class="recently-title">
+            Récemment <span class="highlight-underline">consultés</span>
+        </h2>
+        <div class="cards-container">
+            <div class="card" style="background-image: url('images/isola2000.jpg');">
+                <p class="card-title">Isola2000</p>
+            </div>
+            <div class="card" style="background-image: url('images/auron.jpg');">
+                <p class="card-title">Auron</p>
+            </div>
+            <div class="card" style="background-image: url('images/valberg.jpg');">
+                <p class="card-title">Valberg</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="map-info-section">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    
+        <div class="info-container">
+            <div class="accessibility">
+                <h3>Accéssibilité</h3>
+                <div class="circle-container">
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                </div>
+                <div class="circle-container">
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                </div>
+                <div class="circle-container">
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                    <div class="circle level-3"></div>
+                </div>
+            </div>
+    
+            <div class="frequentation">
+                <h3>Fréquentation</h3>
+                <div class="rectangle-container">
+                    <div class="rectangle level-1"></div>
+                    <div class="rectangle level-2"></div>
+                    <div class="rectangle level-3"></div>
+                </div>
+            </div>
+    
+            <div class="distance">
+                <h3>Distance</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+                <p style="text-align: right;" id="distance-text">Sélectionnez une station</p>
+            </div>
+    
+            <div class="difficulty">
+                <h3>Niveaux de difficultés</h3>
+                <div class="rectangle-container">
+                    <div class="rectangle level-1"></div>
+                    <div class="rectangle level-2"></div>
+                    <div class="rectangle level-3"></div>
+                </div>
+            </div>
+    
+            <!-- Menu de sélection pour les stations -->
+            <div class="station-selector">
+                <label for="station-select">Choisir une station :</label>
+                <select id="station-select">
+                    <option value="isola2000">Isola 2000</option>
+                    <option value="valberg">Valberg</option>
+                    <option value="auron">Auron</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Envoyer" id="submit">
+
+        </div>
+    </section>
+    
+
+
+    <section class="recently-viewed">
+        <h2 class="recently-title">
+            Vos <span class="highlight-underline">Stations</span>
+        </h2>
+        <div class="cards-container">
+            <div class="card" style="background-image: url('images/isola2000.jpg');">
+                <p class="card-title">Isola2000</p>
+            </div>
+            <div class="card" style="background-image: url('images/auron.jpg');">
+                <p class="card-title">Auron</p>
+            </div>
+            <div class="card" style="background-image: url('images/valberg.jpg');">
+                <p class="card-title">Valberg</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="app-section">
+        <h2 class="recently-title">
+            Découvréz notre <span class="highlight-underline">APP</span>
+        </h2>
+        <div class="app-images">
+            <img src="images/images_1.png" alt="App Image 1" class="app-image">
+            <img src="images/images_2png.png" alt="App Image 2" class="app-image">
+            <img src="images/images_3.png" alt="App Image 3" class="app-image">
+        </div>
+    </section>
+
+    
+
+    <!-- Script JavaScript pour la navbar -->
+    <script src="nav.js"></script>
+</body>
+</html>
